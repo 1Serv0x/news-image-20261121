@@ -12,7 +12,8 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-OUT_PATH = os.path.join(HERE, "entry.png")
+OUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR") or HERE
+OUT_PATH = os.path.join(OUT_DIR, "entry.png")
 
 PAGE_W, PAGE_H = 1024, 1024
 PAPER = (250, 246, 238)
