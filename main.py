@@ -88,6 +88,7 @@ def globe_panel(draw, x, y, w, h):
     cx, cy = x + w // 2, y + h // 2 - 12
     for r, col in ((100, (58, 92, 130)), (76, (88, 128, 168)), (52, (150, 180, 205))):
         draw.ellipse([cx - r, cy - r, cx + r, cy + r], outline=col, width=3)
+    draw.ellipse([cx - 112, cy - 112, cx + 112, cy + 112], outline=(235, 235, 230), width=2)
     draw.ellipse([cx - 138, cy - 34, cx + 138, cy + 34], outline=MUSTARD, width=4)
     for dx, dy in ((-58, -34), (48, -58), (78, 26), (-34, 58)):
         draw.ellipse([cx + dx - 7, cy + dy - 7, cx + dx + 7, cy + dy + 7], fill=RED)
